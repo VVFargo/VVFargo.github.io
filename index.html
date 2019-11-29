@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DM</title>
+  <style>
+  * {margin:0;padding:0;user-select:none}
+  #calling {position:absolute;top:0;left:0;width:1920px;height:1080px;z-index:100}
+  #congrat {position:absolute;top:0;left:0;width:1920px;height:1080px;z-index:200}
+  #btn {display:block;position:absolute;border: 1px solid red;top:300px; left:800px;border-radius: 50px;
+        width:70px;height:70px;background-color:yellow;z-index:300}
+  #btn:focus {outline:none}
+  </style>
+</head>
+
+<body>
+
+  <div style="position:relative">
+
+    <video preload="auto" loop="loop"  autoplay="autoplay" muted id="calling">
+        <source src="src/vid1.mp4" type="video/mp4" >
+    </video>
+
+    <video preload="auto" id="congrat" style="display:none">
+        <source src="src/vid2.mp4" type="video/mp4">
+    </video>
+        
+    <button id="btn"><b>НАЖМИ</b></button>
+  </div>
+
+  <script>
+    btn.onclick = function() {
+      if (congrat.style.display == 'none') {congrat.style.display = 'block';congrat.play();return};
+      if (congrat.style.display == 'block') {congrat.style.display = 'none';return}
+    }
+
+  </script>
+
+</body>
+</html>
