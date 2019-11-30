@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='manifest' href='/manifest.json'>
-  <script src="/pwabuilder-sw.js"></script>
+  <script src="sw.js"></script>
   <script>
     if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
@@ -13,7 +13,7 @@
   } else {
     // Register the service worker
     navigator.serviceWorker
-      .register("pwabuilder-sw.js", {
+      .register("sw.js", {
         scope: "./"
       })
       .then(function (reg) {
